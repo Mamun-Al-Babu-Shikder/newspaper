@@ -22,7 +22,7 @@
         <div class="card" style="">
             <img class="card-img-top" src="${singleNews.img}"  style="">
             <div class="card-body">
-                <a href="${singleNews.link}"  ><h5 class="card-title">${singleNews.title}</h5></a>
+                <a href="${singleNews.link}" target="_blank"  ><h5 class="card-title">${singleNews.title}</h5></a>
             </div>
         </div>
         <br>
