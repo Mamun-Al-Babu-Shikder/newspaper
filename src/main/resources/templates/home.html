@@ -1,5 +1,4 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <title>News Portal</title>
     <meta charset="utf-8">
@@ -15,20 +14,19 @@
 <div class="container" style="margin-top: 20px">
     <div class="row">
 
-<c:forEach items="${newsList}" var="singleNews" >
 
-
-    <div class="col-md-4" >
+    <div class="col-md-4" th:each="singleNews : ${newsList}" >
         <div class="card" style="">
-            <img class="card-img-top" src="${singleNews.img}"  style="">
+            <img class="card-img-top" th:src="${singleNews.img}"  style="">
             <div class="card-body">
-                <a href="${singleNews.link}" target="_blank"  ><h5 class="card-title">${singleNews.title}</h5></a>
+                <a th:href="${singleNews.link}" target="_blank"  ><h5 class="card-title">${singleNews.title}</h5></a>
             </div>
         </div>
         <br>
     </div>
 
-</c:forEach>
+
+
 
     </div>
 </div>
