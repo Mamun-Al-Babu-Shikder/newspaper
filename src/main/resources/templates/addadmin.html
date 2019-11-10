@@ -1,0 +1,50 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+
+</head>
+<body>
+<form th:action="add-admin" method="post">
+    <table>
+        <tr>
+            <td>User name </td>
+            <td><input type="email" name="email" required> </td>
+        </tr>
+        <tr>
+            <td>User password </td>
+            <td><input type="password" name="password" required> </td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Save"></td>
+        </tr>
+    </table>
+
+</form>
+
+
+
+<table border="1px">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Email</th>
+        <th>Password</th>
+    </tr>
+
+    </thead>
+
+<tbody>
+<tr th:each="admin : ${adminList}">
+  <td>[[${admin.id}]]</td>
+    <td>[[${admin.email}]]</td>
+    <td>[[${admin.password}]]</td>
+</tr>
+</tbody>
+
+
+</table>
+
+
+
+
+</body>
+</html>
